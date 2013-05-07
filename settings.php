@@ -55,18 +55,6 @@ foreach($params as $param){
         $default = 'localhost';
     }
 
-    // For test issues:
-    if ($param == 'redmine_ex_db_user') {
-        $default = 'bn_redmine';
-    }
-    if ($param == 'redmine_ex_db_name') {
-        $default = 'bitnami_redmine';
-    }
-    if ($param == 'redmine_ex_db_password') {
-        $default = '3e0179f461';
-    }
-
-
     $value = OC_Appconfig::getValue('user_redmine_ex', $param, $default);
     $tmpl->assign($param, $value);
 }
