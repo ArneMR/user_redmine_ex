@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<info>
+    <id>user_redmine_ex</id>
+    <name>Extended Redmine user backend</name>
+    <description>Authenticate users using Redmine Database and manage groups using the same.</description>
+    <version>0.1</version>
+    <licence>AGPL</licence>
+    <author>Arne Maximilian Richter &lt;arne.richter@haw-hamburg.de&gt;</author>
+    <require>5</require>
+    <types>
+        <authentication/>
+    </types>
+</info>
