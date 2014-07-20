@@ -49,6 +49,7 @@ class OC_User_Redmine_ex extends OC_User_Backend {
         // Connect with database:
         try {
             $this->rm_db = new PDO($dsn, $rm_db_user, $rm_db_password);
+	    $this->rm_db->exec('SET NAMES utf8');
             // Connection established:
             $this->rm_db_connected = true;
         } catch (PDOException $e) {
@@ -238,7 +239,6 @@ class OC_User_Redmine_ex extends OC_User_Backend {
         if(!$this->rm_db_connected) {
             return false;
         }
-
         $sql = 'SELECT firstname, lastname FROM users WHERE login = :uid';
         $sth = $this->rm_db->prepare($sql);
         if ($sth->execute(array(':uid' => $uid))) {
